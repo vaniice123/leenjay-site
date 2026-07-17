@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- face -->
+  <circle cx="50" cy="54" r="30" fill="#f4d0c4" stroke="#111" stroke-width="2.2"/>
+  <!-- conical hat -->
+  <path d="M50 14 L74 34 Q62 30 50 30 Q38 30 26 34 Z" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- glasses -->
+  <circle cx="38" cy="52" r="10" fill="none" stroke="#555" stroke-width="2"/>
+  <circle cx="62" cy="52" r="10" fill="none" stroke="#555" stroke-width="2"/>
+  <line x1="48" y1="52" x2="52" y2="52" stroke="#555" stroke-width="2"/>
+  <circle cx="38" cy="52" r="1.6" fill="#111"/>
+  <circle cx="62" cy="52" r="1.6" fill="#111"/>
+  <!-- mouth -->
+  <path d="M40 66 Q50 61 60 66" fill="none" stroke="#555" stroke-width="2" stroke-linecap="round"/>
+</svg>
