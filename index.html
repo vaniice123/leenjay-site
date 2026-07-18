@@ -60,6 +60,15 @@
   .ico-avatar{background:#fff;border:1px solid var(--line)}
   .ico-avatar img{width:34px;height:34px;display:block}
 
+  .subscribe{margin-top:40px;padding:24px 24px 22px;border:1px solid var(--line);border-radius:14px;background:#fafbfc}
+  .sub-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.09em;color:var(--muted);margin-bottom:8px}
+  .sub-title{font-size:1.15rem;font-weight:700;margin:0 0 6px}
+  .sub-desc{font-size:.92rem;color:#5b6270;margin:0 0 16px}
+  .sub-form{display:flex;gap:10px;flex-wrap:wrap}
+  .sub-input{flex:1;min-width:200px;padding:12px 14px;border:1px solid #d7dae2;border-radius:10px;font-size:.95rem;font-family:inherit;color:var(--ink)}
+  .sub-input:focus{outline:none;border-color:#2f6bd6}
+  .sub-btn{padding:12px 24px;border:none;border-radius:10px;background:linear-gradient(135deg,#2f6bd6,#c0473f);color:#fff;font-weight:600;font-size:.95rem;cursor:pointer;font-family:inherit}
+  .sub-btn:hover{opacity:.92}
   footer{margin-top:44px;font-size:.82rem;color:#a4a9b5}
   footer a{color:#a4a9b5;text-decoration:none;border-bottom:1px solid #dfe2e8}
 
@@ -136,6 +145,18 @@
         <span class="chev">›</span>
       </a>
     </nav>
+
+    <section class="subscribe">
+      <div class="sub-eyebrow">SUBSCRIBE</div>
+      <div class="sub-title">Microbiome R&D 소식 받기</div>
+      <div class="sub-desc">마이크로바이옴 관련 학계·업계 동향 새 글을 이메일로 받아보세요.</div>
+      <form action="https://buttondown.com/api/emails/embed-subscribe/leenjay" method="post" target="_blank" class="sub-form">
+        <input type="email" name="email" placeholder="you@example.com" required class="sub-input" aria-label="이메일 주소">
+        <input type="hidden" value="1" name="embed">
+        <button type="submit" class="sub-btn">구독</button>
+      </form>
+    </section>
+
     <footer>© 2026 Jay Lee · <a href="https://leenjay.com">leenjay.com</a></footer>
   </div>
 </body>
