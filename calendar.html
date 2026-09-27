@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jay Lee · 일정</title>
+<meta name="description" content="Jay Lee 예약 가능/불가 일정 (Busy). 제목은 비공개, 시간대만 표시.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#ffffff; --ink:#1f2328; --muted:#8a9099; --line:#eceef1;
+    --busy-bg:#eef1ff; --busy-ink:#3d4ea8; --busy-bd:#dfe4ff;
+    --sun:#e5484d; --sat:#3b6fe0; --today:#111;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1216; --card:#171b21; --ink:#e8eaed; --muted:#8b929c; --line:#242a31;
+      --busy-bg:#1e2740; --busy-ink:#aab6f2; --busy-bd:#2b365a;
+      --sun:#ff6b6f; --sat:#6f97ff; --today:#fff;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);
+    font-family:'Helvetica Neue',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+    line-height:1.5;padding:0 16px 60px}
+  .cover{height:96px;margin:0 -16px 0;background:linear-gradient(120deg,#2f6df6,#8b3bd6 55%,#e5484d)}
+  .wrap{max-width:820px;margin:0 auto}
+  header{margin-top:-40px;margin-bottom:22px}
+  .badge{display:inline-block;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:16px 20px;box-shadow:0 4px 18px #0000000f}
+  h1{font-size:22px;font-weight:800;letter-spacing:-.3px}
+  .sub{color:var(--muted);font-size:14px;margin-top:4px}
+  .legend{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:12px;font-size:13px;color:var(--muted)}
+  .legend .busy{position:static}
+  .month{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:16px 14px 18px;margin-bottom:18px;box-shadow:0 2px 10px #0000000a}
+  .month h2{font-size:17px;font-weight:700;margin:2px 4px 12px}
+  .wdrow,.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .wd{text-align:center;font-size:12px;color:var(--muted);padding:2px 0 6px;font-weight:600}
+  .wd.sun{color:var(--sun)} .wd.sat{color:var(--sat)}
+  .week{margin-bottom:6px}
+  .cell{min-height:78px;border:1px solid var(--line);border-radius:9px;padding:5px 5px 6px;
+    background:transparent;display:flex;flex-direction:column;gap:3px}
+  .cell.other{opacity:0;pointer-events:none;border:none}
+  .cell.past{opacity:.45}
+  .dnum{font-size:12.5px;font-weight:600;color:var(--ink)}
+  .cell.csun .dnum{color:var(--sun)} .cell.csat .dnum{color:var(--sat)}
+  .cell.today{border-color:var(--today);border-width:2px;padding:4px}
+  .cell.today .dnum{background:var(--today);color:var(--bg);border-radius:6px;
+    padding:0 6px;align-self:flex-start}
+  .busy{display:block;font-size:10.5px;line-height:1.35;background:var(--busy-bg);
+    color:var(--busy-ink);border:1px solid var(--busy-bd);border-radius:5px;
+    padding:1px 4px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  footer{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
+  footer a{color:var(--busy-ink);text-decoration:none}
+  @media (max-width:560px){
+    .cell{min-height:64px}
+    .busy{font-size:9.5px;padding:1px 3px}
+    .dnum{font-size:11.5px}
+  }
+</style>
+</head>
+<body>
+<div class="cover"></div>
+<div class="wrap">
+  <header>
+    <div class="badge">
+      <h1>Jay Lee · 일정</h1>
+      <div class="sub">예약 가능 여부만 표시합니다. 회의 제목·내용은 공개하지 않습니다.</div>
+      <div class="legend">
+        <span><span class="busy">09:00–10:00</span></span>
+        <span>= 예약됨(Busy)</span>
+        <span>· 시간대: 한국(KST)</span>
+      </div>
+    </div>
+  </header>
+  <section class="month"><h2>2026년 9월</h2><div class="wdrow"><div class="wd sun">일</div><div class="wd ">월</div><div class="wd ">화</div><div class="wd ">수</div><div class="wd ">목</div><div class="wd ">금</div><div class="wd sat">토</div></div><div class="week"><div class="cell other csun"><span class="dnum">30</span></div><div class="cell other"><span class="dnum">31</span></div><div class="cell past"><span class="dnum">1</span><span class="busy">09:00–15:00</span></div><div class="cell past"><span class="dnum">2</span></div><div class="cell past"><span class="dnum">3</span><span class="busy">22:00–23:00</span></div><div class="cell past"><span class="dnum">4</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat past"><span class="dnum">5</span></div></div><div class="week"><div class="cell csun past"><span class="dnum">6</span></div><div class="cell past"><span class="dnum">7</span></div><div class="cell past"><span class="dnum">8</span></div><div class="cell past"><span class="dnum">9</span></div><div class="cell past"><span class="dnum">10</span><span class="busy">14:20–15:20</span></div><div class="cell past"><span class="dnum">11</span><span class="busy">08:30–10:00</span><span class="busy">15:00–18:00</span><span class="busy">22:30–23:00</span></div><div class="cell csat past"><span class="dnum">12</span></div></div><div class="week"><div class="cell csun past"><span class="dnum">13</span></div><div class="cell past"><span class="dnum">14</span><span class="busy">14:00–15:00</span></div><div class="cell past"><span class="dnum">15</span></div><div class="cell past"><span class="dnum">16</span><span class="busy">16:00–17:00</span></div><div class="cell past"><span class="dnum">17</span></div><div class="cell past"><span class="dnum">18</span><span class="busy">15:00–18:00</span></div><div class="cell csat past"><span class="dnum">19</span></div></div><div class="week"><div class="cell csun past"><span class="dnum">20</span></div><div class="cell past"><span class="dnum">21</span><span class="busy">13:00–14:00</span></div><div class="cell past"><span class="dnum">22</span><span class="busy">08:30–09:30</span></div><div class="cell past"><span class="dnum">23</span></div><div class="cell past"><span class="dnum">24</span></div><div class="cell past"><span class="dnum">25</span><span class="busy">15:00–18:00</span></div><div class="cell csat past"><span class="dnum">26</span></div></div><div class="week"><div class="cell today csun"><span class="dnum">27</span></div><div class="cell"><span class="dnum">28</span><span class="busy">10:00–11:00</span><span class="busy">14:00–15:00</span></div><div class="cell"><span class="dnum">29</span></div><div class="cell"><span class="dnum">30</span></div><div class="cell other"><span class="dnum">1</span></div><div class="cell other"><span class="dnum">2</span></div><div class="cell other csat"><span class="dnum">3</span></div></div></section>
+<section class="month"><h2>2026년 10월</h2><div class="wdrow"><div class="wd sun">일</div><div class="wd ">월</div><div class="wd ">화</div><div class="wd ">수</div><div class="wd ">목</div><div class="wd ">금</div><div class="wd sat">토</div></div><div class="week"><div class="cell other today csun"><span class="dnum">27</span></div><div class="cell other"><span class="dnum">28</span></div><div class="cell other"><span class="dnum">29</span></div><div class="cell other"><span class="dnum">30</span></div><div class="cell"><span class="dnum">1</span><span class="busy">23:00–24:00</span></div><div class="cell"><span class="dnum">2</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">3</span></div></div><div class="week"><div class="cell csun"><span class="dnum">4</span></div><div class="cell"><span class="dnum">5</span></div><div class="cell"><span class="dnum">6</span></div><div class="cell"><span class="dnum">7</span></div><div class="cell"><span class="dnum">8</span></div><div class="cell"><span class="dnum">9</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">10</span></div></div><div class="week"><div class="cell csun"><span class="dnum">11</span></div><div class="cell"><span class="dnum">12</span><span class="busy">14:00–15:00</span></div><div class="cell"><span class="dnum">13</span></div><div class="cell"><span class="dnum">14</span><span class="busy">14:00–15:00</span><span class="busy">16:00–17:00</span></div><div class="cell"><span class="dnum">15</span></div><div class="cell"><span class="dnum">16</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">17</span></div></div><div class="week"><div class="cell csun"><span class="dnum">18</span></div><div class="cell"><span class="dnum">19</span></div><div class="cell"><span class="dnum">20</span></div><div class="cell"><span class="dnum">21</span></div><div class="cell"><span class="dnum">22</span></div><div class="cell"><span class="dnum">23</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">24</span></div></div><div class="week"><div class="cell csun"><span class="dnum">25</span></div><div class="cell"><span class="dnum">26</span><span class="busy">14:00–15:00</span></div><div class="cell"><span class="dnum">27</span></div><div class="cell"><span class="dnum">28</span></div><div class="cell"><span class="dnum">29</span></div><div class="cell"><span class="dnum">30</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span><span class="busy">18:30–21:30</span></div><div class="cell csat"><span class="dnum">31</span></div></div></section>
+<section class="month"><h2>2026년 11월</h2><div class="wdrow"><div class="wd sun">일</div><div class="wd ">월</div><div class="wd ">화</div><div class="wd ">수</div><div class="wd ">목</div><div class="wd ">금</div><div class="wd sat">토</div></div><div class="week"><div class="cell csun"><span class="dnum">1</span></div><div class="cell"><span class="dnum">2</span></div><div class="cell"><span class="dnum">3</span></div><div class="cell"><span class="dnum">4</span></div><div class="cell"><span class="dnum">5</span></div><div class="cell"><span class="dnum">6</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">7</span></div></div><div class="week"><div class="cell csun"><span class="dnum">8</span></div><div class="cell"><span class="dnum">9</span><span class="busy">14:00–15:00</span></div><div class="cell"><span class="dnum">10</span></div><div class="cell"><span class="dnum">11</span><span class="busy">17:00–18:00</span></div><div class="cell"><span class="dnum">12</span><span class="busy">10:00–11:00</span></div><div class="cell"><span class="dnum">13</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">14</span></div></div><div class="week"><div class="cell csun"><span class="dnum">15</span></div><div class="cell"><span class="dnum">16</span></div><div class="cell"><span class="dnum">17</span></div><div class="cell"><span class="dnum">18</span></div><div class="cell"><span class="dnum">19</span></div><div class="cell"><span class="dnum">20</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">21</span></div></div><div class="week"><div class="cell csun"><span class="dnum">22</span></div><div class="cell"><span class="dnum">23</span><span class="busy">14:00–15:00</span></div><div class="cell"><span class="dnum">24</span></div><div class="cell"><span class="dnum">25</span></div><div class="cell"><span class="dnum">26</span></div><div class="cell"><span class="dnum">27</span><span class="busy">08:30–09:30</span><span class="busy">15:00–18:00</span></div><div class="cell csat"><span class="dnum">28</span></div></div><div class="week"><div class="cell csun"><span class="dnum">29</span></div><div class="cell"><span class="dnum">30</span></div><div class="cell other"><span class="dnum">1</span></div><div class="cell other"><span class="dnum">2</span></div><div class="cell other"><span class="dnum">3</span></div><div class="cell other"><span class="dnum">4</span></div><div class="cell other csat"><span class="dnum">5</span></div></div></section>
+  <footer>
+    매주 자동 갱신 · 마지막 업데이트: 2026-09-27 (KST) · <a href="https://leenjay.com/">leenjay.com</a>
+  </footer>
+</div>
+</body>
+</html>
