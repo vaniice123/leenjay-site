@@ -48,7 +48,8 @@
   .headshot{flex:0 0 190px;width:190px;border-radius:12px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(20,24,40,.10);display:block;margin-top:0}
 
   .eyebrow{font-size:.76rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-  .links{display:flex;flex-direction:column;gap:12px}
+  .links{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+  .col{display:flex;flex-direction:column;gap:12px}
   .link{display:flex;align-items:center;gap:16px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);text-decoration:none;color:var(--ink);background:#fff;transition:transform .12s ease,border-color .12s ease,box-shadow .12s ease}
   .link:hover{transform:translateY(-2px);border-color:#d7dae2;box-shadow:0 8px 22px rgba(20,24,40,.07)}
   .link .ico{width:40px;height:40px;flex:0 0 40px;border-radius:11px;display:flex;align-items:center;justify-content:center;color:#fff}
@@ -81,6 +82,13 @@
     .profile-row{flex-direction:column-reverse;gap:20px}
     .headshot{flex:none;width:150px;margin-top:0}
     .bio{font-size:.98rem}
+    .links{gap:10px}
+    .col{gap:10px}
+    .link{gap:11px;padding:13px 13px}
+    .link .ico{width:34px;height:34px;flex:0 0 34px;border-radius:9px}
+    .link .txt b{font-size:.92rem}
+    .link .txt span{font-size:.74rem}
+    .link .chev{display:none}
   }
 </style>
 <script type="application/ld+json">
@@ -119,36 +127,35 @@
 
     <div class="eyebrow">Links</div>
     <nav class="links">
-      <a class="link" href="https://www.linkedin.com/in/jayjangyounglee/" target="_blank" rel="noopener">
-        <span class="ico ico-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
-        <span class="txt"><b>LinkedIn</b><span>경력 · 프로필</span></span>
-        <span class="chev">›</span>
-      </a>
-      <a class="link" href="https://leenjay.notion.site/p/fa2b54b697af4a7188de390288cbd41c?pvs=25" target="_blank" rel="noopener">
-        <span class="ico ico-avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='54' r='30' fill='%23f4d0c4' stroke='%23111' stroke-width='2.2'/%3E%3Cpath d='M50 14 L74 34 Q62 30 50 30 Q38 30 26 34 Z' fill='%232b2b2b'/%3E%3Ccircle cx='38' cy='52' r='10' fill='none' stroke='%23555' stroke-width='2'/%3E%3Ccircle cx='62' cy='52' r='10' fill='none' stroke='%23555' stroke-width='2'/%3E%3Cline x1='48' y1='52' x2='52' y2='52' stroke='%23555' stroke-width='2'/%3E%3Ccircle cx='38' cy='52' r='1.6' fill='%23111'/%3E%3Ccircle cx='62' cy='52' r='1.6' fill='%23111'/%3E%3Cpath d='M40 66 Q50 61 60 66' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" alt=""></span>
-        <span class="txt"><b>Jay's Blog</b><span>생각 단편 · 글</span></span>
-        <span class="chev">›</span>
-      </a>
-      <a class="link" href="https://x.com/jaylee67" target="_blank" rel="noopener">
-        <span class="ico ico-x"><svg viewBox="0 0 24 24"><path d="M18.9 1.6h3.5l-7.6 8.7L24 22.4h-7.4l-5.4-7-6.2 7H1.5l8.1-9.3L0 1.6h7.6l4.9 6.4 5.4-6.4zm-1.2 18.7h1.9L6.4 3.6H4.3l13.4 16.7z"/></svg></span>
-        <span class="txt"><b>X (Twitter)</b><span>@jaylee67</span></span>
-        <span class="chev">›</span>
-      </a>
-      <a class="link" href="http://blog.healthbiome.co.kr/" target="_blank" rel="noopener">
-        <span class="ico ico-mb"><svg viewBox="0 0 24 24"><path d="M9 2h6v1.5h-1v4.2l4.9 8.5A3 3 0 0 1 16.3 21H7.7a3 3 0 0 1-2.6-4.8L10 8.7V3.5H9V2zm2.5 1.5v5.6l-3.9 6.7c-.4.7.1 1.7 1 1.7h6.8c.9 0 1.4-1 1-1.7l-3.9-6.7V3.5h-1z"/></svg></span>
-        <span class="txt"><b>Microbiome R&D</b><span>마이크로바이옴 동향 정리</span></span>
-        <span class="chev">›</span>
-      </a>
-      <a class="link" href="https://leenjay.notion.site/a46a543f43284d9e8317a90fcdddbed6?v=3fb0a134c5cd80798e5a000cd0c252a2&amp;source=copy_link" target="_blank" rel="noopener">
-        <span class="ico ico-news"><svg viewBox="0 0 24 24"><path d="M4 3h14a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1zm2 4v2h10V7H6zm0 4v2h7v-2H6zm0 4v2h7v-2H6zm9-4v2h2v-2h-2zm0 4v2h2v-2h-2z"/></svg></span>
-        <span class="txt"><b>Jay's news clipping</b><span>관심 뉴스 스크랩</span></span>
-        <span class="chev">›</span>
-      </a>
-      <a class="link" href="https://leenjay.com/calendar">
-        <span class="ico ico-cal"><svg viewBox="0 0 24 24"><path d="M7 2h2v2h6V2h2v2h1a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1V2zm13 7H4v10h16V9z"/></svg></span>
-        <span class="txt"><b>Jay's Calendar</b><span>미팅 가능 시간</span></span>
-        <span class="chev">›</span>
-      </a>
+      <div class="col">
+        <a class="link" href="https://www.linkedin.com/in/jayjangyounglee/" target="_blank" rel="noopener">
+          <span class="ico ico-li"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></span>
+          <span class="txt"><b>LinkedIn</b><span>경력 · 프로필</span></span>
+          <span class="chev">›</span>
+        </a>
+        <a class="link" href="https://x.com/jaylee67" target="_blank" rel="noopener">
+          <span class="ico ico-x"><svg viewBox="0 0 24 24"><path d="M18.9 1.6h3.5l-7.6 8.7L24 22.4h-7.4l-5.4-7-6.2 7H1.5l8.1-9.3L0 1.6h7.6l4.9 6.4 5.4-6.4zm-1.2 18.7h1.9L6.4 3.6H4.3l13.4 16.7z"/></svg></span>
+          <span class="txt"><b>X (Twitter)</b><span>@jaylee67</span></span>
+          <span class="chev">›</span>
+        </a>
+      </div>
+      <div class="col">
+        <a class="link" href="https://leenjay.notion.site/p/fa2b54b697af4a7188de390288cbd41c?pvs=25" target="_blank" rel="noopener">
+          <span class="ico ico-avatar"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='54' r='30' fill='%23f4d0c4' stroke='%23111' stroke-width='2.2'/%3E%3Cpath d='M50 14 L74 34 Q62 30 50 30 Q38 30 26 34 Z' fill='%232b2b2b'/%3E%3Ccircle cx='38' cy='52' r='10' fill='none' stroke='%23555' stroke-width='2'/%3E%3Ccircle cx='62' cy='52' r='10' fill='none' stroke='%23555' stroke-width='2'/%3E%3Cline x1='48' y1='52' x2='52' y2='52' stroke='%23555' stroke-width='2'/%3E%3Ccircle cx='38' cy='52' r='1.6' fill='%23111'/%3E%3Ccircle cx='62' cy='52' r='1.6' fill='%23111'/%3E%3Cpath d='M40 66 Q50 61 60 66' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" alt=""></span>
+          <span class="txt"><b>Jay's Blog</b><span>생각 단편 · 글</span></span>
+          <span class="chev">›</span>
+        </a>
+        <a class="link" href="http://blog.healthbiome.co.kr/" target="_blank" rel="noopener">
+          <span class="ico ico-mb"><svg viewBox="0 0 24 24"><path d="M9 2h6v1.5h-1v4.2l4.9 8.5A3 3 0 0 1 16.3 21H7.7a3 3 0 0 1-2.6-4.8L10 8.7V3.5H9V2zm2.5 1.5v5.6l-3.9 6.7c-.4.7.1 1.7 1 1.7h6.8c.9 0 1.4-1 1-1.7l-3.9-6.7V3.5h-1z"/></svg></span>
+          <span class="txt"><b>Microbiome R&D</b><span>마이크로바이옴 동향 정리</span></span>
+          <span class="chev">›</span>
+        </a>
+        <a class="link" href="https://leenjay.notion.site/a46a543f43284d9e8317a90fcdddbed6?v=3fb0a134c5cd80798e5a000cd0c252a2&amp;source=copy_link" target="_blank" rel="noopener">
+          <span class="ico ico-news"><svg viewBox="0 0 24 24"><path d="M4 3h14a1 1 0 0 1 1 1v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1zm2 4v2h10V7H6zm0 4v2h7v-2H6zm0 4v2h7v-2H6zm9-4v2h2v-2h-2zm0 4v2h2v-2h-2z"/></svg></span>
+          <span class="txt"><b>Jay's news clipping</b><span>관심 뉴스 스크랩</span></span>
+          <span class="chev">›</span>
+        </a>
+      </div>
     </nav>
 
 
